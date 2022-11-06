@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hello, World!</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  
+  <script>
+    
+  var text = '';
+  
+  function count_word_length(){
+    
+     var word_counter = 0;
+    text = document.getElementById('input').value;
+    
+    document.getElementById('Result').innerHTML = text.length;
+    
+    
+    
+    
+    for (var i =0; i<text.length; i++){
+      
+      var current_letter = text[i];
+      
+      console.log(current_letter);
+      
+      
+      if (current_letter == " "){
+        
+         word_counter+=1;
+      }
+    }
+    
+   
+  document.getElementById('Result2').innerHTML = word_counter;
+  }  
+  
+    
+  </script>
+  
+  
+  <body>
+
+<h1> Type A Word In The Box </h1>
+
+<input id= "input" oninput="count_word_length()"> </input>
+ 
+ 
+  
+<h1>letters counter </h1>  
+<h1 id="Result"></h1> 
+
+<h1>word counter </h1>  
+<h1 id="Result2"></h1> 
+
+  
+</body>
+</html>
